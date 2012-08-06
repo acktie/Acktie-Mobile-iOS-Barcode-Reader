@@ -2,7 +2,7 @@
 
 ## Description
 
-This module allows for a quick integration of a barcode reader into your Appcelerator Mobile application.  The barcode reading ability comes in three scanning modes and supports may barcode standards.
+This module allows for a quick integration of a barcode reader into your Appcelerator Mobile application.  The barcode reading ability comes in two scanning modes and supports many barcode standards.
 
 *  Scan from Camera Feed
 *  Scan from Photo Album (user selected)
@@ -87,12 +87,12 @@ Valid barcode "type" string returned from module :
 ### cancel (Callack)
 Called if the user clicks the cancel button.
 
-*NOTE*: Not callback data returned.
+*NOTE*: No callback data returned.
 
 ### error 
 Called if the scan was not successful in reading the barcode.
 
-*NOTE*: Not callback data returned.
+*NOTE*: No callback data returned.
 
 ### scanBarcodeFromAlbum
 
@@ -280,6 +280,7 @@ This module does not support manual image capture like the QR Code module does. 
 
 ## Change Log
 *  1.0:  Initial Release
+*    -:  Fixed documenation errors and included sample images
 
 ## Author
 
