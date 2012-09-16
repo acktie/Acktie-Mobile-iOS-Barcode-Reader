@@ -10,12 +10,17 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 #import "TiApp.h"
+#import "TiUIViewProxy.h"
+#import "TiUIButtonProxy.h"
 
 @implementation ComAcktieMobileIosBarcodeModule
 
 @synthesize continuous;
 @synthesize userControlLight;
 @synthesize allowZoom;
+@synthesize proxy;
+@synthesize navBarButton;
+@synthesize popover;
 
 NSDictionary *barcodeDict = nil;
 NSArray *allBarcodes = nil;
@@ -143,7 +148,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
 -(float) overlayAlpha: (NSDictionary*) overlay
 {
     float alpha = [TiUtils floatValue:[overlay objectForKey:@"alpha"] def:1.0f];
-    NSLog([NSString stringWithFormat:@"%@ %d", @"alpha:", alpha]);
+    NSLog([NSString stringWithFormat:@"%@ %f", @"alpha:", alpha]);
     
     return alpha;
 }
@@ -348,7 +353,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
                 }
                 else
                 {
-                    NSLog([NSString stringWithFormat:@"%Unknown barcode type: %@", barcode]);
+                    NSLog([NSString stringWithFormat:@"Unknown barcode type: %@", barcode]);
                 }            
             }
             else
@@ -729,7 +734,45 @@ static const enum zbar_symbol_type_e allSymbols[] =
     
     [self continuous:args];
     [self initScanner:args :readerController :cameraMode :sourceType :useOverlay];
+    [self setProxy:nil];
+    [self setNavBarButton:nil];
     
-    [self show];
+    if([args objectForKey:@"view"] != nil)
+    {
+        [self setProxy:(TiViewProxy*)[args objectForKey:@"view"]];
+    }
+    else if([args objectForKey:@"navBarButton"] != nil)
+    {
+        UIBarButtonItem* button = ((TiUIButtonProxy *)[args objectForKey:@"navBarButton"]).barButtonItem;
+        [self setNavBarButton:button];
+    }
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        if ([self.popover isPopoverVisible])
+        {
+            NSLog(@"Popover already exist and is being displayed.");
+            return;
+        }
+
+        [self setPopover:[[UIPopoverController alloc] initWithContentViewController:reader]];
+        
+        if(self.navBarButton != nil)
+        {
+            [self.popover presentPopoverFromBarButtonItem:navBarButton permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
+        else if(self.proxy != nil)
+        {
+            [self.popover presentPopoverFromRect:self.proxy.view.frame inView:self.proxy.parent.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
+        else
+        {
+            NSLog(@"You must specify a \"view\" or \"navBarButton\" on an iPad when calling the scanBarcodeFromAlbum.");
+        }
+    }
+    else
+    {
+        [self show];
+    }
+
 }
 @end

@@ -5,6 +5,7 @@
  * and licensed under the Apache Public License (version 2)
  */
 #import "TiModule.h"
+#import "TiUIViewProxy.h"
 
 @interface ComAcktieMobileIosBarcodeModule : TiModule <UINavigationControllerDelegate, ZBarReaderDelegate>
 {
@@ -19,5 +20,8 @@
 @property(nonatomic,readwrite,assign) BOOL continuous;
 @property(nonatomic,readwrite,assign) BOOL userControlLight;
 @property(nonatomic,readwrite,assign) BOOL allowZoom;
+@property(nonatomic,readwrite,assign) TiViewProxy* proxy;
+@property(nonatomic,readwrite,assign) UIBarButtonItem* navBarButton;
+@property(nonatomic,readwrite,assign) UIPopoverController *popover;
 
 @end
