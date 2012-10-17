@@ -728,7 +728,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
     ENSURE_SINGLE_ARG_OR_NIL(args, NSDictionary);
     
     NSString* readerController = @"ZBarReaderController";
-    ZBarReaderControllerCameraMode cameraMode = ZBarReaderControllerCameraModeDefault;
+    ZBarReaderControllerCameraMode cameraMode = ZBarReaderControllerCameraModeDefault;;
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     BOOL useOverlay = false;
     

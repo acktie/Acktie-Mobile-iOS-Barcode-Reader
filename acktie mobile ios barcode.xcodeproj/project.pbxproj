@@ -28,27 +28,26 @@
 		24DE9E1211C5FE74003F90F6 /* ComAcktieMobileIosBarcodeModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComAcktieMobileIosBarcodeModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* ComAcktieMobileIosBarcode_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComAcktieMobileIosBarcode_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		EF2D910015B4DD680025D020 /* Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E615B4DD680025D020 /* Decoder.h */; };
-		EF2D910115B4DD680025D020 /* Exception.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E715B4DD680025D020 /* Exception.h */; };
-		EF2D910215B4DD680025D020 /* Image.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E815B4DD680025D020 /* Image.h */; };
-		EF2D910315B4DD680025D020 /* ImageScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E915B4DD680025D020 /* ImageScanner.h */; };
-		EF2D910415B4DD680025D020 /* Processor.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EA15B4DD680025D020 /* Processor.h */; };
-		EF2D910515B4DD680025D020 /* Scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EB15B4DD680025D020 /* Scanner.h */; };
-		EF2D910615B4DD680025D020 /* Symbol.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EC15B4DD680025D020 /* Symbol.h */; };
-		EF2D910715B4DD680025D020 /* Video.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90ED15B4DD680025D020 /* Video.h */; };
-		EF2D910815B4DD680025D020 /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EE15B4DD680025D020 /* Window.h */; };
-		EF2D910915B4DD680025D020 /* zbar.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EF15B4DD680025D020 /* zbar.h */; };
-		EF2D910A15B4DD680025D020 /* ZBarCameraSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F015B4DD680025D020 /* ZBarCameraSimulator.h */; };
-		EF2D910B15B4DD680025D020 /* ZBarCaptureReader.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F115B4DD680025D020 /* ZBarCaptureReader.h */; };
-		EF2D910C15B4DD680025D020 /* ZBarHelpController.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F215B4DD680025D020 /* ZBarHelpController.h */; };
-		EF2D910D15B4DD680025D020 /* ZBarImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F315B4DD680025D020 /* ZBarImage.h */; };
-		EF2D910E15B4DD680025D020 /* ZBarImageScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F415B4DD680025D020 /* ZBarImageScanner.h */; };
-		EF2D910F15B4DD680025D020 /* ZBarReaderController.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F515B4DD680025D020 /* ZBarReaderController.h */; };
-		EF2D911015B4DD680025D020 /* ZBarReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F615B4DD680025D020 /* ZBarReaderView.h */; };
-		EF2D911115B4DD680025D020 /* ZBarReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F715B4DD680025D020 /* ZBarReaderViewController.h */; };
-		EF2D911215B4DD680025D020 /* ZBarSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F815B4DD680025D020 /* ZBarSDK.h */; };
-		EF2D911315B4DD680025D020 /* ZBarSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F915B4DD680025D020 /* ZBarSymbol.h */; };
-		EF2D911415B4DD680025D020 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2D90FA15B4DD680025D020 /* libzbar.a */; };
+		EF12C242160A82140047DE36 /* Decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E615B4DD680025D020 /* Decoder.h */; };
+		EF12C243160A82140047DE36 /* Exception.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E715B4DD680025D020 /* Exception.h */; };
+		EF12C244160A82140047DE36 /* Image.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E815B4DD680025D020 /* Image.h */; };
+		EF12C245160A82140047DE36 /* ImageScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90E915B4DD680025D020 /* ImageScanner.h */; };
+		EF12C246160A82140047DE36 /* Processor.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EA15B4DD680025D020 /* Processor.h */; };
+		EF12C247160A82140047DE36 /* Scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EB15B4DD680025D020 /* Scanner.h */; };
+		EF12C248160A82140047DE36 /* Symbol.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EC15B4DD680025D020 /* Symbol.h */; };
+		EF12C249160A82140047DE36 /* Video.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90ED15B4DD680025D020 /* Video.h */; };
+		EF12C24A160A82140047DE36 /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EE15B4DD680025D020 /* Window.h */; };
+		EF12C24B160A82140047DE36 /* zbar.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90EF15B4DD680025D020 /* zbar.h */; };
+		EF12C24C160A82140047DE36 /* ZBarCameraSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F015B4DD680025D020 /* ZBarCameraSimulator.h */; };
+		EF12C24D160A82140047DE36 /* ZBarCaptureReader.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F115B4DD680025D020 /* ZBarCaptureReader.h */; };
+		EF12C24E160A82140047DE36 /* ZBarHelpController.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F215B4DD680025D020 /* ZBarHelpController.h */; };
+		EF12C24F160A82140047DE36 /* ZBarImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F315B4DD680025D020 /* ZBarImage.h */; };
+		EF12C250160A82140047DE36 /* ZBarImageScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F415B4DD680025D020 /* ZBarImageScanner.h */; };
+		EF12C251160A82140047DE36 /* ZBarReaderController.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F515B4DD680025D020 /* ZBarReaderController.h */; };
+		EF12C252160A82140047DE36 /* ZBarReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F615B4DD680025D020 /* ZBarReaderView.h */; };
+		EF12C253160A82140047DE36 /* ZBarReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F715B4DD680025D020 /* ZBarReaderViewController.h */; };
+		EF12C254160A82140047DE36 /* ZBarSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F815B4DD680025D020 /* ZBarSDK.h */; };
+		EF12C255160A82140047DE36 /* ZBarSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2D90F915B4DD680025D020 /* ZBarSymbol.h */; };
 		EF2D911915B4DDB40025D020 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2D911815B4DDB40025D020 /* AVFoundation.framework */; };
 		EF2D911B15B4DDC00025D020 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2D911A15B4DDC00025D020 /* CoreMedia.framework */; };
 		EF2D911D15B4DDCA0025D020 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2D911C15B4DDCA0025D020 /* CoreVideo.framework */; };
@@ -119,7 +118,6 @@
 				EF2D911B15B4DDC00025D020 /* CoreMedia.framework in Frameworks */,
 				EF2D911915B4DDB40025D020 /* AVFoundation.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				EF2D911415B4DD680025D020 /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,29 +249,29 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF12C242160A82140047DE36 /* Decoder.h in Headers */,
+				EF12C243160A82140047DE36 /* Exception.h in Headers */,
+				EF12C244160A82140047DE36 /* Image.h in Headers */,
+				EF12C245160A82140047DE36 /* ImageScanner.h in Headers */,
+				EF12C246160A82140047DE36 /* Processor.h in Headers */,
+				EF12C247160A82140047DE36 /* Scanner.h in Headers */,
+				EF12C248160A82140047DE36 /* Symbol.h in Headers */,
+				EF12C249160A82140047DE36 /* Video.h in Headers */,
+				EF12C24A160A82140047DE36 /* Window.h in Headers */,
+				EF12C24B160A82140047DE36 /* zbar.h in Headers */,
+				EF12C24C160A82140047DE36 /* ZBarCameraSimulator.h in Headers */,
+				EF12C24D160A82140047DE36 /* ZBarCaptureReader.h in Headers */,
+				EF12C24E160A82140047DE36 /* ZBarHelpController.h in Headers */,
+				EF12C24F160A82140047DE36 /* ZBarImage.h in Headers */,
+				EF12C250160A82140047DE36 /* ZBarImageScanner.h in Headers */,
+				EF12C251160A82140047DE36 /* ZBarReaderController.h in Headers */,
+				EF12C252160A82140047DE36 /* ZBarReaderView.h in Headers */,
+				EF12C253160A82140047DE36 /* ZBarReaderViewController.h in Headers */,
+				EF12C254160A82140047DE36 /* ZBarSDK.h in Headers */,
+				EF12C255160A82140047DE36 /* ZBarSymbol.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ComAcktieMobileIosBarcode_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* ComAcktieMobileIosBarcodeModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComAcktieMobileIosBarcodeModuleAssets.h in Headers */,
-				EF2D910015B4DD680025D020 /* Decoder.h in Headers */,
-				EF2D910115B4DD680025D020 /* Exception.h in Headers */,
-				EF2D910215B4DD680025D020 /* Image.h in Headers */,
-				EF2D910315B4DD680025D020 /* ImageScanner.h in Headers */,
-				EF2D910415B4DD680025D020 /* Processor.h in Headers */,
-				EF2D910515B4DD680025D020 /* Scanner.h in Headers */,
-				EF2D910615B4DD680025D020 /* Symbol.h in Headers */,
-				EF2D910715B4DD680025D020 /* Video.h in Headers */,
-				EF2D910815B4DD680025D020 /* Window.h in Headers */,
-				EF2D910915B4DD680025D020 /* zbar.h in Headers */,
-				EF2D910A15B4DD680025D020 /* ZBarCameraSimulator.h in Headers */,
-				EF2D910B15B4DD680025D020 /* ZBarCaptureReader.h in Headers */,
-				EF2D910C15B4DD680025D020 /* ZBarHelpController.h in Headers */,
-				EF2D910D15B4DD680025D020 /* ZBarImage.h in Headers */,
-				EF2D910E15B4DD680025D020 /* ZBarImageScanner.h in Headers */,
-				EF2D910F15B4DD680025D020 /* ZBarReaderController.h in Headers */,
-				EF2D911015B4DD680025D020 /* ZBarReaderView.h in Headers */,
-				EF2D911115B4DD680025D020 /* ZBarReaderViewController.h in Headers */,
-				EF2D911215B4DD680025D020 /* ZBarSDK.h in Headers */,
-				EF2D911315B4DD680025D020 /* ZBarSymbol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
