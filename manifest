@@ -2,12 +2,12 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.3
+version: 1.6
 apiversion: 2
 description: Simple Drop in and Use Barcode reader for iOS
 author: Tony Nuzzi
 license: See LICENSE file
-copyright: Copyright ©2012 Acktie, LLC, All Rights Reserved
+copyright: Copyright ©2013 Acktie, LLC, All Rights Reserved
 
 
 # these should not be edited
@@ -15,4 +15,4 @@ name: acktie mobile ios barcode
 moduleid: com.acktie.mobile.ios.barcode
 guid: 65d076de-fa81-4d4c-b564-75f66c3f6a30
 platform: iphone
-minsdk: 1.8.2
+minsdk: 2.1.3.GA

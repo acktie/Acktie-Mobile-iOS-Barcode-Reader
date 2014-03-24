@@ -21,6 +21,7 @@
 @synthesize proxy;
 @synthesize navBarButton;
 @synthesize popover;
+@synthesize cameraDevice;
 
 NSDictionary *barcodeDict = nil;
 NSArray *allBarcodes = nil;
@@ -47,6 +48,7 @@ static const enum zbar_symbol_type_e symbolValues[] =
     ZBAR_QRCODE,
     ZBAR_CODE93,
     ZBAR_CODE128,
+    ZBAR_CODABAR,
 };
 
 static const enum zbar_symbol_type_e allSymbols[] = 
@@ -67,6 +69,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
     ZBAR_PDF417,
     ZBAR_CODE93,
     ZBAR_CODE128,
+    ZBAR_CODABAR,
 };
 
 #pragma mark Internal
@@ -322,7 +325,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
     controls = nil;
 }
 
--(void)initScanner: (NSDictionary*) args: (NSString*) readerController: (ZBarReaderControllerCameraMode) cameraMode: (UIImagePickerControllerSourceType) sourceType: (BOOL) useOverlay
+-(void)initScanner: (NSDictionary*) args: (NSString*) readerController: (ZBarReaderControllerCameraMode) cameraMode: (UIImagePickerControllerSourceType) sourceType: (BOOL) useOverlay: (UIImagePickerControllerCameraDevice) cameraDeviceToUse
 {
     // init reader
     [self initReader: readerController];
@@ -376,6 +379,12 @@ static const enum zbar_symbol_type_e allSymbols[] =
     
     //cameraMode
     reader.cameraMode = cameraMode;
+    
+    //cameraDevice
+    if(cameraDeviceToUse != 0)
+    {
+        reader.cameraDevice = cameraDeviceToUse;
+    }
     
     if ([reader isKindOfClass:[ZBarReaderViewController class]]) 
     {
@@ -579,6 +588,29 @@ static const enum zbar_symbol_type_e allSymbols[] =
     }
 }
 
+- (void) useFrontCamera: (id)args
+{
+    ENSURE_SINGLE_ARG_OR_NIL(args, NSDictionary);
+    
+    if ([args objectForKey:@"useFrontCamera"] != nil)
+    {
+        if([TiUtils boolValue:[args objectForKey:@"useFrontCamera"]])
+        {
+            [self setCameraDevice:UIImagePickerControllerCameraDeviceFront];
+        }
+        else
+        {
+            [self setCameraDevice:UIImagePickerControllerCameraDeviceRear];
+        }
+    }
+    else
+    {
+        [self setCameraDevice:UIImagePickerControllerCameraDeviceRear];
+    }
+    
+    NSLog([NSString stringWithFormat:@"cameraDevice: %d", cameraDevice]);
+}
+
 #pragma mark Lifecycle
 
 -(void)startup
@@ -606,6 +638,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
                    [NSNumber numberWithInt: ZBAR_PDF417], @"PDF417",
                    [NSNumber numberWithInt: ZBAR_CODE93], @"CODE93",
                    [NSNumber numberWithInt: ZBAR_CODE128], @"CODE128",
+                   [NSNumber numberWithInt: ZBAR_CODABAR], @"CODABAR",
                    nil];
     allBarcodes = [NSArray arrayWithObjects:
                    @"EAN2",
@@ -624,6 +657,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
                    @"PDF417",
                    @"CODE93",
                    @"CODE128",
+                   @"CODABAR",
                    nil];
     
 	
@@ -676,7 +710,8 @@ static const enum zbar_symbol_type_e allSymbols[] =
     [self continuous:args];
     [self userControlLight:args];
     [self allowZoom:args];
-    [self initScanner:args :readerController :cameraMode :sourceType :useOverlay];
+    [self useFrontCamera:args];
+    [self initScanner:args :readerController :cameraMode :sourceType :useOverlay :cameraDevice];
     
     // Use custom controls
     reader.showsZBarControls = NO;
@@ -711,7 +746,8 @@ static const enum zbar_symbol_type_e allSymbols[] =
     
     [self continuous:args];
     [self userControlLight:args];
-    [self initScanner:args :readerController :cameraMode :sourceType :useOverlay];
+    [self useFrontCamera:args];
+    [self initScanner:args :readerController :cameraMode :sourceType :useOverlay :cameraDevice];
     
     reader.showsZBarControls = NO;
     reader.showsCameraControls = NO;
@@ -733,7 +769,7 @@ static const enum zbar_symbol_type_e allSymbols[] =
     BOOL useOverlay = false;
     
     [self continuous:args];
-    [self initScanner:args :readerController :cameraMode :sourceType :useOverlay];
+    [self initScanner:args :readerController :cameraMode :sourceType :useOverlay :0];
     [self setProxy:nil];
     [self setNavBarButton:nil];
     

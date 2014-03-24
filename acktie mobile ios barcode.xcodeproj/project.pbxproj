@@ -74,6 +74,7 @@
 		AA747D9E0F9514B9006C5449 /* ComAcktieMobileIosBarcode_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComAcktieMobileIosBarcode_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComAcktieMobileIosBarcode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComAcktieMobileIosBarcode.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E796329116C894A000A6B9A9 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
 		EF2D90E615B4DD680025D020 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		EF2D90E715B4DD680025D020 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		EF2D90E815B4DD680025D020 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		EF2D90F715B4DD680025D020 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
 		EF2D90F815B4DD680025D020 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
 		EF2D90F915B4DD680025D020 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
-		EF2D90FA15B4DD680025D020 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
 		EF2D90FC15B4DD680025D020 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
 		EF2D90FD15B4DD680025D020 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		EF2D90FE15B4DD680025D020 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		EF2D90E215B4DD680025D020 /* ZBarSDK */ = {
 			isa = PBXGroup;
 			children = (
+				E796329116C894A000A6B9A9 /* libzbar.a */,
 				EF2D90E315B4DD680025D020 /* Headers */,
-				EF2D90FA15B4DD680025D020 /* libzbar.a */,
 				EF2D90FB15B4DD680025D020 /* Resources */,
 			);
 			path = ZBarSDK;
@@ -404,6 +404,8 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				TITANIUM_SDK = "/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
+				TITANIUM_SDK_VERSION = 2.1.3.GA;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -449,6 +451,8 @@
 				PRODUCT_NAME = ComAcktieMobileIosBarcode;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				TITANIUM_SDK = "/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
+				TITANIUM_SDK_VERSION = 2.1.3.GA;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -495,6 +499,8 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				TITANIUM_SDK = "/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
+				TITANIUM_SDK_VERSION = 2.1.3.GA;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -536,6 +542,8 @@
 				PRODUCT_NAME = ComAcktieMobileIosBarcode;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
+				TITANIUM_SDK = "/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
+				TITANIUM_SDK_VERSION = 2.1.3.GA;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -548,6 +556,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PRODUCT_NAME = "Build & test";
+				TITANIUM_SDK = "/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
+				TITANIUM_SDK_VERSION = 2.1.3.GA;
 			};
 			name = Debug;
 		};
@@ -559,6 +569,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "Build & test";
+				TITANIUM_SDK = "/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)";
+				TITANIUM_SDK_VERSION = 2.1.3.GA;
 				ZERO_LINK = NO;
 			};
 			name = Release;

@@ -23,5 +23,6 @@
 @property(nonatomic,readwrite,assign) TiViewProxy* proxy;
 @property(nonatomic,readwrite,assign) UIBarButtonItem* navBarButton;
 @property(nonatomic,readwrite,assign) UIPopoverController *popover;
+@property(nonatomic,readwrite,assign) UIImagePickerControllerCameraDevice cameraDevice;
 
 @end
