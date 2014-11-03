@@ -1,7 +1,7 @@
+.DS_Store
 tmp
 bin
 build
-*.zip
 *.class
 *.merge-left*
 *.merge-right*
@@ -15,3 +15,4 @@ _svn
 svn-commit*.tmp
 acktie mobile ios barcode.xcodeproj/project.xcworkspace
 acktie mobile ios barcode.xcodeproj/xcuserdata
+.DS_Store
